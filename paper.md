@@ -97,7 +97,7 @@ Palmer (2026) provides a formal framework for this intuition [9]. His Rational Q
 
 1. **The Continuity Requirement.** Shor's algorithm requires that the Hilbert space remain continuous throughout the computation. The entanglement of many qubits creates superposition states with infinitely many possible phase values. Only upon measurement does this continuous superposition collapse to discrete output bits.
 
-2. **Phase Precision Scaling.** As the number of entangled qubits grows, maintaining coherent superposition demands exponentially increasing phase precision. Small quantum systems can achieve the necessary precision, and repeated algorithm runs produce clear interference patterns. Beyond a critical scale, however, the required phase resolution becomes so fine that physical fluctuations — no matter how small — destroy the quantum coherence.
+2. **Phase Precision Scaling.** As the number of entangled qubits grows, maintaining coherent superposition demands exponentially increasing phase precision. Small quantum systems can achieve the necessary precision, and repeated algorithm runs produce clear interference patterns. Beyond a critical scale, however, the required phase resolution becomes so fine that physical fluctuations — no matter how small — may destroy the quantum coherence.
 
 3. **The Planck Analogy.** Just as spacetime itself becomes ill-defined below the Planck length ($\ell_P = 1.6 \times 10^{-35}$ m), there may exist a fundamental limit to quantum phase precision. When a quantum algorithm demands phase resolution finer than this limit, the interference pattern degrades to noise — not due to technical imperfections, but because the physics itself breaks down.
 
