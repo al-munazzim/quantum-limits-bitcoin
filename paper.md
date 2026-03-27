@@ -83,37 +83,38 @@ The apparent "magic" is that quantum superposition allows the algorithm to explo
 
 ### The Phase Resolution Problem
 
-A system of $n$ entangled qubits spans a Hilbert space of $2^n$ dimensions. For Shor's algorithm to function, the quantum state must maintain coherent phase relationships across all these dimensions simultaneously.
+A system of $n$ entangled qubits spans a Hilbert space of $2^n$ dimensions. For Shor's algorithm to function, the quantum state must maintain coherent phase relationships across all these dimensions simultaneously — and crucially, this Hilbert space must be **continuous**, not discrete.
 
-For 1,000 qubits, the Hilbert space has $2^{1000}$ dimensions — a number vastly exceeding the estimated number of particles in the observable universe (${\sim}10^{80} \approx 2^{265}$). The algorithm requires the physical system to distinguish phase differences on the order of $1/2^{1000}$.
+In classical quantum mechanics, each of the 1,000 dimensions has infinitely many possible values, forming a continuous superposition state. The algorithm requires the physical system to distinguish phase differences with extraordinary precision — on the order of $1/2^{1000}$ — to extract the correct answer through constructive interference when the quantum state is measured.
 
-The question is whether any physical system of finite mass-energy, embedded in a universe with gravitational interactions, can actually support phase resolution of this precision.
+The critical insight is that this phase precision requirement becomes more stringent as the system scales. For small quantum systems, the required phase resolution is achievable, and repeated algorithm runs (shots) produce clear interference patterns that reveal the solution. However, as the entanglement size grows, the demanded phase precision becomes so fine that even the smallest physical fluctuations or disturbances destroy the delicate interference pattern, reducing the algorithm's output to statistical noise.
+
+**The fundamental question:** Does the universe impose a limit on phase precision in quantum systems, analogous to how the Planck length limits spatial measurements? Just as no physical system can probe distances smaller than the Planck scale ($\sim 10^{-35}$ m), there may exist a fundamental limit to the phase resolution achievable in large-scale quantum superpositions.
 
 ### Palmer's Rational Quantum Mechanics
 
-Palmer (2026) provides a formal framework for this intuition [9]. His Rational Quantum Mechanics (RaQM) proposes that:
+Palmer (2026) provides a formal framework for this intuition [9]. His Rational Quantum Mechanics (RaQM) proposes that the continuous Hilbert spaces assumed by standard quantum mechanics — essential for algorithms like Shor's — face fundamental physical limits at scale:
 
-1. **Hilbert space is discrete, not continuous.** Gravity imposes a discretization on the quantum state space. The bases in which quantum states are defined must satisfy rational-number constraints.
+1. **The Continuity Requirement.** Shor's algorithm requires that the Hilbert space remain continuous throughout the computation. The entanglement of many qubits creates superposition states with infinitely many possible phase values. Only upon measurement does this continuous superposition collapse to discrete output bits.
 
-2. **Information capacity is finite.** For any $n$-qubit state, there exists a finite information capacity parameter $p$. The actual information content grows linearly with $n$ (as $n \times p$), while the continuum theory requires exponentially many degrees of freedom ($2^n$). For large $n$, the physical qubits cannot carry enough information to maintain the full quantum state.
+2. **Phase Precision Scaling.** As the number of entangled qubits grows, maintaining coherent superposition demands exponentially increasing phase precision. Small quantum systems can achieve the necessary precision, and repeated algorithm runs produce clear interference patterns. Beyond a critical scale, however, the required phase resolution becomes so fine that physical fluctuations — no matter how small — destroy the quantum coherence.
 
-3. **Standard QM is a singular limit.** Conventional quantum mechanics corresponds to $p \to \infty$ (the continuum limit). RaQM and QM are experimentally indistinguishable for small numbers of qubits but diverge at scale.
+3. **The Planck Analogy.** Just as spacetime itself becomes ill-defined below the Planck length ($\ell_P = 1.6 \times 10^{-35}$ m), there may exist a fundamental limit to quantum phase precision. When a quantum algorithm demands phase resolution finer than this limit, the interference pattern degrades to noise — not due to technical imperfections, but because the physics itself breaks down.
 
-4. **Quantitative prediction.** Palmer estimates that *p* lies between 200 and 400 for current qubit technologies and will never exceed 1,000. Beyond this threshold, the exponential advantage of quantum algorithms saturates.
+4. **Empirical Prediction.** Palmer estimates this breakdown occurs around 1,000 high-quality qubits. Beyond this threshold, algorithms requiring maximal superposition (like Shor's) produce only statistical noise, regardless of error correction quality or the number of repeated runs.
 
 ### The Analogy to Classical Limits
 
-The relationship between RaQM and standard quantum mechanics mirrors the relationship between relativistic and Newtonian mechanics. Just as special relativity imposes the speed of light as an absolute limit on velocity — invisible at everyday speeds but dominant at high velocities — RaQM imposes an information-theoretic limit on quantum parallelism that is invisible for small qubit counts but dominant at scale.
+The relationship between RaQM and standard quantum mechanics mirrors the relationship between general relativity and classical physics at extreme scales. Just as spacetime geometry becomes ill-defined below the Planck length — invisible for everyday measurements but dominant at quantum gravitational scales — RaQM imposes a phase precision limit on quantum systems that is invisible for small qubit counts but dominant at large scale.
 
-| Physical Limit | Domain | What It Bounds |
-|---|---|---|
-| Speed of light (*c*) | Mechanics | Maximum velocity |
-| Bremermann limit | Classical computation | Maximum computation rate per mass |
-| Bekenstein bound | Information theory | Maximum information per volume-energy |
-| Landauer principle | Thermodynamics | Minimum energy per logical operation |
-| Palmer's *p*-parameter | Quantum computation | Maximum effective Hilbert space dimension |
+| Physical Limit | Domain | What It Bounds | Scale Where Dominant |
+|---|---|---|---|
+| Speed of light (*c*) | Mechanics | Maximum velocity | High velocities (relativistic) |
+| Planck length ($\ell_P$) | Spacetime | Minimum meaningful distance | Quantum gravity scale |
+| Landauer principle | Thermodynamics | Minimum energy per logical operation | All irreversible computation |
+| Quantum phase precision | Quantum computation | Maximum coherent superposition | Large entanglement (>1000 qubits) |
 
-Table 1: *Fundamental physical limits relevant to computation. All represent cases where the universe imposes absolute bounds that no engineering can circumvent.*
+Table 1: *Fundamental physical limits that appear as absolute bounds no engineering can circumvent. Each represents a point where the underlying physics changes character.*
 
 ---
 
@@ -121,13 +122,17 @@ Table 1: *Fundamental physical limits relevant to computation. All represent cas
 
 A natural objection is that quantum error correction (QEC) can, in principle, maintain coherence indefinitely by encoding logical qubits in larger numbers of physical qubits [10]. Standard quantum mechanics guarantees that QEC can scale arbitrarily, given sufficient physical resources.
 
-However, if Palmer's discretization is correct, QEC faces a fundamental — not technical — barrier. Error correction works by detecting and correcting deviations from the ideal quantum state. But if the ideal state (requiring $1/2^{1000}$ phase precision) is physically unrealizable, then:
+However, if the phase precision limit is fundamental, QEC faces an insurmountable barrier — not a technical one, but a physical law. The problem is not that the quantum state is being corrupted by external noise that can be corrected. The problem is that the required phase precision itself exceeds what the universe can support.
 
-1. The "errors" being corrected are not random perturbations but structural features of discrete Hilbert space.
-2. Adding more physical qubits for error correction does not restore information that the universe cannot encode in the first place.
-3. The system does not decohere in the traditional sense (interaction with environment) but rather exhibits what might be called **fundamental decoherence** — the quantum state simply cannot carry the required information.
+Beyond the critical threshold:
 
-The observable result: beyond the critical qubit count, measurement outcomes degrade from a peaked interference pattern (correct answer with high probability) into flat statistical noise, regardless of error correction quality.
+1. **Error correction is powerless.** Adding more physical qubits for error correction cannot restore phase precision that the physics does not permit in the first place.
+
+2. **More shots don't help.** Running the algorithm repeatedly (more "shots") cannot improve the signal-to-noise ratio because the fundamental interference pattern has been destroyed. Noise remains noise, regardless of repetition.
+
+3. **The breakdown is absolute.** Unlike technical limitations (which can be overcome with better engineering), this represents a point where the underlying physics changes character — analogous to trying to measure distances smaller than the Planck length.
+
+The observable result: beyond ~1,000 qubits, algorithms requiring maximal superposition produce only statistical noise. No amount of error correction, repetition, or engineering refinement can recover the quantum speedup because the universe simply cannot maintain the required phase relationships.
 
 ---
 
