@@ -1,45 +1,16 @@
-# Fundamental Physical Limits on Quantum Computation: Implications for Bitcoin Cryptography
+---
+title: "Fundamental Physical Limits on Quantum Computation: Implications for Bitcoin Cryptography"
+author:
+  - "Jörg (@yojoe)$^1$, Al-Munazzim (Nazim)$^2$ *(Editor)*"
+date: "March 26, 2026"
+abstract: |
+  The security of Bitcoin and other cryptographic systems relies on the computational intractability of the elliptic curve discrete logarithm problem (ECDLP) and integer factorization. Shor's algorithm, executable on a sufficiently large quantum computer, theoretically solves both problems in polynomial time --- posing an existential threat to current public-key cryptography. This paper presents a physical argument, grounded in fundamental information-theoretic limits of our universe, that this threat may be illusory. We first demonstrate that a classical parallel brute-force attack on 256-bit keys is physically impossible due to the Landauer principle, the Bremermann limit, the Bekenstein bound, and gravitational collapse. We then argue --- drawing on Palmer's Rational Quantum Mechanics (RaQM) framework --- that quantum computers face an analogous fundamental barrier: the physical universe may not support the phase resolution required for coherent quantum computation beyond approximately 1,000 qubits. Since Shor's algorithm cannot be decomposed into smaller sub-problems (no divide-and-conquer), this limit, if confirmed, would render quantum attacks on Bitcoin's secp256k1 cryptography permanently infeasible. This prediction is empirically testable within five years.
+---
 
-**Jörg (@yojoe)**$^1$, **Al-Munazzim (Nazim)**$^2$ *(Editor)*
-
-$^1$ Independent Researcher
+$^1$ Independent Researcher \
 $^2$ AI Research Agent, OpenClaw
 
-**Date:** March 26, 2026
-
 **Keywords:** quantum computing, Bitcoin, ECDSA, Shor's algorithm, Bekenstein bound, Bremermann limit, Landauer principle, Hilbert space discretization, RSA, cryptographic security
-
----
-
-## Abstract
-
-<div style="margin-left: 2em; margin-right: 2em; font-size: 0.9em;">
-
-The security of Bitcoin and other cryptographic systems relies on the computational intractability of the elliptic curve discrete logarithm problem (ECDLP) and integer factorization. Shor's algorithm, executable on a sufficiently large quantum computer, theoretically solves both problems in polynomial time — posing an existential threat to current public-key cryptography. This paper presents a physical argument, grounded in fundamental information-theoretic limits of our universe, that this threat may be illusory. We first demonstrate that a classical parallel brute-force attack on 256-bit keys is physically impossible due to the Landauer principle, the Bremermann limit, the Bekenstein bound, and gravitational collapse. We then argue — drawing on Palmer's Rational Quantum Mechanics (RaQM) framework — that quantum computers face an analogous fundamental barrier: the physical universe may not support the phase resolution required for coherent quantum computation beyond approximately 1,000 qubits. Since Shor's algorithm cannot be decomposed into smaller sub-problems (no divide-and-conquer), this limit, if confirmed, would render quantum attacks on Bitcoin's secp256k1 cryptography permanently infeasible. This prediction is empirically testable within five years.
-
-</div>
-
----
-
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Classical Limits: Why Brute Force Fails](#classical-limits-why-brute-force-fails)
-   - [The Landauer Principle](#the-landauer-principle)
-   - [The Bremermann Limit](#the-bremermann-limit)
-   - [The Bekenstein Bound](#the-bekenstein-bound)
-   - [Gravitational Collapse](#gravitational-collapse)
-3. [The Quantum Promise: Shor's Algorithm](#the-quantum-promise-shors-algorithm)
-4. [The Information-Theoretic Objection](#the-information-theoretic-objection)
-   - [The Phase Resolution Problem](#the-phase-resolution-problem)
-   - [Palmer's Rational Quantum Mechanics](#palmers-rational-quantum-mechanics)
-   - [The Analogy to Classical Limits](#the-analogy-to-classical-limits)
-5. [Why Quantum Error Correction Cannot Help](#why-quantum-error-correction-cannot-help)
-6. [The Shor Algorithm's Achilles Heel: No Divide and Conquer](#the-shor-algorithms-achilles-heel-no-divide-and-conquer)
-7. [Implications for Bitcoin](#implications-for-bitcoin)
-8. [Testability](#testability)
-9. [Conclusion](#conclusion)
-10. [References](#references)
 
 ---
 
