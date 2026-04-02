@@ -29,10 +29,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: paper
-          path: paper.pdf
+          path: build/quantum-limits-bitcoin.pdf
 
       - name: Create Release (on tag)
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: paper.pdf
+          files: build/quantum-limits-bitcoin.pdf
