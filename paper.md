@@ -1,19 +1,16 @@
-# Fundamental Physical Limits on Quantum Computation: Implications for Bitcoin Cryptography
-
-**Jörg (@yojoe)**$^1$, **Al-Munazzim (Nazim)**$^2$ *(Editor)*
-
-$^1$ Independent Researcher
-$^2$ AI Research Agent, OpenClaw
-
-**Date:** March 26, 2026
-
-**Keywords:** quantum computing, Bitcoin, ECDSA, Shor's algorithm, Bekenstein bound, Bremermann limit, Landauer principle, Hilbert space discretization, RSA, cryptographic security
-
+---
+title: "Fundamental Physical Limits on Quantum Computation: Implications for Bitcoin Cryptography"
+author:
+  - "Jörg (@yojoe)$^1$, Al-Munazzim (Nazim)$^2$ *(Editor)*"
+date: "March 26, 2026"
+abstract: |
+  The security of Bitcoin and other cryptographic systems relies on the computational intractability of the elliptic curve discrete logarithm problem (ECDLP) and integer factorization. Shor's algorithm, executable on a sufficiently large quantum computer, theoretically solves both problems in polynomial time --- posing an existential threat to current public-key cryptography. This paper presents a physical argument, grounded in fundamental information-theoretic limits of our universe, that this threat may be illusory. We first demonstrate that a classical parallel brute-force attack on 256-bit keys is physically impossible due to the Landauer principle, the Bremermann limit, the Bekenstein bound, and gravitational collapse. We then argue --- drawing on Palmer's Rational Quantum Mechanics (RaQM) framework --- that quantum computers face an analogous fundamental barrier: the physical universe may not support the phase resolution required for coherent quantum computation beyond approximately 1,000 qubits. Since Shor's algorithm cannot be decomposed into smaller sub-problems (no divide-and-conquer), this limit, if confirmed, would render quantum attacks on Bitcoin's secp256k1 cryptography permanently infeasible. This prediction is empirically testable within five years.
 ---
 
-## Abstract
+$^1$ Independent Researcher \
+$^2$ AI Research Agent, OpenClaw
 
-The security of Bitcoin and other cryptographic systems relies on the computational intractability of the elliptic curve discrete logarithm problem (ECDLP) and integer factorization. Shor's algorithm, executable on a sufficiently large quantum computer, theoretically solves both problems in polynomial time — posing an existential threat to current public-key cryptography. This paper presents a physical argument, grounded in fundamental information-theoretic limits of our universe, that this threat may be illusory. We first demonstrate that a classical parallel brute-force attack on 256-bit keys is physically impossible due to the Landauer principle, the Bremermann limit, the Bekenstein bound, and gravitational collapse. We then argue — drawing on Palmer's Rational Quantum Mechanics (RaQM) framework — that quantum computers face an analogous fundamental barrier: the physical universe may not support the phase resolution required for coherent quantum computation beyond approximately 1,000 qubits. Since Shor's algorithm cannot be decomposed into smaller sub-problems (no divide-and-conquer), this limit, if confirmed, would render quantum attacks on Bitcoin's secp256k1 cryptography permanently infeasible. This prediction is empirically testable within five years.
+**Keywords:** quantum computing, Bitcoin, ECDSA, Shor's algorithm, Bekenstein bound, Bremermann limit, Landauer principle, Hilbert space discretization, RSA, cryptographic security
 
 ---
 

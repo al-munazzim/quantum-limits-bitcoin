@@ -10,7 +10,9 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-OUTPUT="paper.pdf"
+BUILD_DIR="build"
+OUTPUT="${BUILD_DIR}/quantum-limits-bitcoin.pdf"
+mkdir -p "$BUILD_DIR"
 
 # Check dependencies
 for cmd in pandoc xelatex; do
@@ -53,6 +55,7 @@ pandoc paper.md \
 \posttitle{\end{center}\vskip 0.5em}' \
     --highlight-style=tango \
     --number-sections \
+    --shift-heading-level-by=-1 \
     --toc \
     -V toc-depth=2 \
     -V secnumdepth=2 \
@@ -60,6 +63,7 @@ pandoc paper.md \
 
 if [ -f "$OUTPUT" ]; then
     echo "✅ Built: $(pwd)/$OUTPUT ($(du -h "$OUTPUT" | cut -f1))"
+    echo "   Open with: xdg-open $OUTPUT"
 else
     echo "❌ Build failed"
     exit 1
